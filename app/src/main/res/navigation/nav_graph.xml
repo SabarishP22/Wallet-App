@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.walletapp.ui.screens.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.walletapp.ui.screens.auth.LoginFragment"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.walletapp.ui.screens.auth.RegisterFragment"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.walletapp.ui.screens.home.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.example.walletapp.ui.screens.transactions.TransactionsFragment"
+        tools:layout="@layout/fragment_transactions" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.walletapp.ui.screens.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

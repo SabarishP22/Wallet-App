@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/appLogoIv"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="@null"
+        android:src="@drawable/app_icon"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/screenNameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:fontFamily="@font/popins_700"
+        android:textAlignment="center"
+        android:textColor="@color/grey_80"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appLogoIv"/>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userDetailsCl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/screenNameTv">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/userDetailsNsv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/emailCv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/emailEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="name"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:textColor="@color/grey_80"
+                        android:singleLine="true"
+                        android:fontFamily="@font/popins_600"
+                        android:hint="@string/enter_your_email"
+                        android:textColorHint="@color/grey_60"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress"
+                        android:padding="15dp"
+                        android:textSize="15sp" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/emailErrorTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/please_enter_your_email_address"
+                    android:textColor="@color/red_500"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/emailCv" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/passwordCv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/emailErrorTv">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/passwordEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="name"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:hint="@string/password"
+                            android:textColorHint="@color/grey_60"
+                            android:textColor="@color/grey_80"
+                            android:singleLine="true"
+                            android:fontFamily="@font/popins_600"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:padding="15dp"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/showHidePasswordIv"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="13dp"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@null"
+                            android:padding="6dp"
+                            android:src="@drawable/view"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/passwordErrorTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/please_enter_your_password"
+                    android:textColor="@color/red_500"
+                    android:textSize="11sp"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@id/passwordCv"
+                    app:layout_constraintEnd_toEndOf="@id/passwordCv"
+                    app:layout_constraintTop_toBottomOf="@id/passwordCv" />
+
+                <TextView
+                    android:id="@+id/forgotPasswordTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/popins_600"
+                    android:padding="10dp"
+                    android:text="@string/forgot_password"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey_80"
+                    android:textSize="13sp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="@id/passwordCv"
+                    app:layout_constraintTop_toBottomOf="@id/passwordErrorTv" />
+
+                <Button
+                    android:id="@+id/loginBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/light_blue_600"
+                    android:text="@string/login"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:padding="11dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/popins_700"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/forgotPasswordTv" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/loginTermsTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/login_terms_conditions"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey_80"
+                    android:fontFamily="@font/popins_500"
+                    android:textSize="11sp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/registerLinkTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="17dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/popins_600"
+                    android:text="@string/don_t_have_an_account_register"
+                    android:textColor="@color/grey_80"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/loginTermsTv" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

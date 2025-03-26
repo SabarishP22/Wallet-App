@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.WalletApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!--<item name="android:statusBarColor">@color/white_trans_20</item>-->
+    </style>
+
+    <style name="Theme.WalletApp" parent="Base.Theme.WalletApp" />
+
+    <!--Shape able image view-->
+    <style name="ShapeAbleRoundView">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!--line-->
+    <style name="line">
+        <item name="android:background">@color/grey_500</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+</resources>

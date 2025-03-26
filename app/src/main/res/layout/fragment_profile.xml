@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/profileHeadTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/popins_700"
+        android:padding="10dp"
+        android:layout_marginStart="6dp"
+        android:text="@string/profile"
+        android:textColor="@color/grey_80"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileImageIv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:padding="2sp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileHeadTv"
+        app:shapeAppearanceOverlay="@style/ShapeAbleRoundView"
+        app:strokeColor="@color/green_A200"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="40dp"
+        android:backgroundTint="@color/red_500"
+        android:fontFamily="@font/popins_700"
+        android:padding="9dp"
+        android:text="@string/logout"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/emailCl"/>
+
+    <TextView
+        android:id="@+id/feedBackBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="40dp"
+        android:fontFamily="@font/popins_700"
+        android:padding="9dp"
+        android:text="@string/give_feedback"
+        android:textColor="@color/grey_80"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/logoutBtn"/>
+
+    <TextView
+        android:id="@+id/nameHeadTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/popins_600"
+        android:text="@string/name"
+        android:textColor="@color/grey_40"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileImageIv" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nameCl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="@id/nameHeadTv"
+        app:layout_constraintStart_toStartOf="@id/nameHeadTv"
+        app:layout_constraintTop_toBottomOf="@id/nameHeadTv">
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/popins_700"
+            android:text="@string/name"
+            android:textColor="@color/grey_60"
+            android:textSize="18sp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/emailHeadTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/popins_600"
+        android:text="@string/email"
+        android:textColor="@color/grey_40"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameCl" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/emailCl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="@id/nameHeadTv"
+        app:layout_constraintStart_toStartOf="@id/nameHeadTv"
+        app:layout_constraintTop_toBottomOf="@id/emailHeadTv">
+
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/popins_700"
+            android:text="@string/email"
+            android:textColor="@color/grey_60"
+            android:textSize="18sp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

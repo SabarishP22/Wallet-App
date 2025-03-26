@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="100dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileIv"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="10dp"
+                android:padding="3dp"
+                android:src="@drawable/avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAbleRoundView"
+                app:strokeColor="@color/teal_500"
+                app:strokeWidth="1.5dp" />
+
+            <TextView
+                android:id="@+id/welcomeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/popins_600"
+                android:text="@string/welcome_back"
+                android:textColor="@color/grey_60"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/profileIv" />
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/popins_700"
+                android:text="Sabarish P"
+                android:textColor="@color/blue"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@id/profileIv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/welcomeTv" />
+
+            <TextView
+                android:id="@+id/totalBalanceHeadTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/popins_600"
+                android:text="@string/total_balance"
+                android:textColor="@color/grey_60"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/nameTv"
+                app:layout_constraintTop_toBottomOf="@id/nameTv" />
+
+            <TextView
+                android:id="@+id/totalBalanceTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/popins_800"
+                android:text="@string/_5_206"
+                android:textColor="@color/grey_90"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/nameTv"
+                app:layout_constraintTop_toBottomOf="@id/totalBalanceHeadTv" />
+
+            <Button
+                android:id="@+id/addAmountToWalletBtn"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/green_500"
+                android:fontFamily="@font/popins_700"
+                android:padding="11dp"
+                android:text="@string/add_amount_to_wallet"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardCv" />
+
+            <Button
+                android:id="@+id/removeWalletBtn"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/red_500"
+                android:fontFamily="@font/popins_700"
+                android:padding="11dp"
+                android:text="@string/remove_wallet"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addAmountToWalletBtn" />
+
+            <Button
+                android:id="@+id/addWalletBtn"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="50dp"
+                android:backgroundTint="@color/light_blue_600"
+                android:fontFamily="@font/popins_700"
+                android:padding="11dp"
+                android:text="@string/add_wallet"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/removeWalletBtn" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCvTop1"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="45dp"
+                android:backgroundTint="@color/color2"
+                android:visibility="gone"
+                app:cardCornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/cardCv"
+                app:layout_constraintStart_toStartOf="@+id/cardCv"
+                app:layout_constraintTop_toBottomOf="@id/totalBalanceTv" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCvTop2"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:backgroundTint="@color/color5"
+                android:visibility="gone"
+                app:cardCornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/cardCv"
+                app:layout_constraintStart_toStartOf="@+id/cardCv"
+                app:layout_constraintTop_toBottomOf="@id/cardCvTop1" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="-3dp"
+                android:layout_marginEnd="46dp"
+                android:backgroundTint="@color/color3"
+                android:elevation="12dp"
+                android:visibility="visible"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardCvTop2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/appLogoIv"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="23dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/app_icon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/cardTypeIv"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="23dp"
+                        android:layout_marginEnd="15dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/bank_account"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/firstFourStarTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="23dp"
+                        android:fontFamily="@font/popins_600"
+                        android:text="@string/four_star"
+                        android:textColor="@color/white"
+                        android:textSize="21sp"
+                        app:layout_constraintEnd_toStartOf="@id/secondFourStartTv"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cardTypeIv" />
+
+                    <TextView
+                        android:id="@+id/secondFourStartTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/popins_600"
+                        android:text="@string/four_star"
+                        android:textColor="@color/white"
+                        android:textSize="21sp"
+                        app:layout_constraintEnd_toStartOf="@id/thirdFourStartTv"
+                        app:layout_constraintStart_toEndOf="@id/firstFourStarTv"
+                        app:layout_constraintTop_toTopOf="@id/firstFourStarTv" />
+
+                    <TextView
+                        android:id="@+id/thirdFourStartTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/popins_600"
+                        android:text="@string/four_star"
+                        android:textColor="@color/white"
+                        android:textSize="21sp"
+                        app:layout_constraintEnd_toStartOf="@id/lastFourDigitTv"
+                        app:layout_constraintStart_toEndOf="@id/secondFourStartTv"
+                        app:layout_constraintTop_toTopOf="@id/firstFourStarTv" />
+
+                    <TextView
+                        android:id="@+id/lastFourDigitTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/popins_600"
+                        android:text="1234"
+                        android:textColor="@color/white"
+                        android:textSize="21sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/thirdFourStartTv"
+                        app:layout_constraintTop_toTopOf="@id/firstFourStarTv" />
+
+                    <TextView
+                        android:id="@+id/cardHolderHeaderTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="23dp"
+                        android:fontFamily="@font/popins_500"
+                        android:text="@string/card_holder"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/firstFourStarTv"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/cardHolderTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/popins_600"
+                        android:text="Your name"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/cardHolderHeaderTv"
+                        app:layout_constraintTop_toBottomOf="@id/cardHolderHeaderTv" />
+
+                    <TextView
+                        android:id="@+id/expiredHeaderTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/popins_500"
+                        android:text="@string/expired"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/cardHolderHeaderTv"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/expiredTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/popins_600"
+                        android:text="09/27"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        app:layout_constraintEnd_toEndOf="@id/expiredHeaderTv"
+                        app:layout_constraintTop_toBottomOf="@id/expiredHeaderTv" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/qrCl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line1">
+
+                <TextView
+                    android:id="@+id/scanQrTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/popins_700"
+                    android:text="Scan QR code"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey_80"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toStartOf="@id/myQrTv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/myQrTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/popins_700"
+                    android:text="My QR code"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey_80"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/scanQrTv"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/scanQrIv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/scan_qr"
+                    app:layout_constraintEnd_toEndOf="@+id/scanQrTv"
+                    app:layout_constraintStart_toStartOf="@+id/scanQrTv"
+                    app:layout_constraintTop_toBottomOf="@+id/scanQrTv" />
+
+                <ImageView
+                    android:id="@+id/myQrIv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@null"
+                    android:padding="2dp"
+                    android:src="@drawable/my_qr"
+                    app:layout_constraintEnd_toEndOf="@+id/myQrTv"
+                    app:layout_constraintStart_toStartOf="@+id/myQrTv"
+                    app:layout_constraintTop_toBottomOf="@+id/myQrTv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/descForQrCodeTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="@font/popins_700"
+                android:justificationMode="inter_character"
+                android:text="@string/scan_qr_and_my_qr"
+                android:textAlignment="center"
+                android:textColor="@color/brown_400"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/qrCl" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/spentIncomeCl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line2">
+
+                <TextView
+                    android:id="@+id/spentTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/popins_700"
+                    android:text="@string/spent"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey_80"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toStartOf="@id/incomeTv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/incomeTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/popins_700"
+                    android:text="@string/income"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey_80"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/spentTv"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/spentAmountTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/popins_800"
+                    android:text="@string/_5_206"
+                    android:textAlignment="center"
+                    android:textColor="@color/red_400"
+                    android:textSize="28sp"
+                    app:layout_constraintEnd_toEndOf="@+id/spentTv"
+                    app:layout_constraintStart_toStartOf="@+id/spentTv"
+                    app:layout_constraintTop_toBottomOf="@+id/spentTv" />
+
+                <TextView
+                    android:id="@+id/incomeAmountTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/popins_800"
+                    android:text="@string/_5_206"
+                    android:textAlignment="center"
+                    android:textColor="@color/green_400"
+                    android:textSize="28sp"
+                    app:layout_constraintEnd_toEndOf="@+id/incomeTv"
+                    app:layout_constraintStart_toStartOf="@id/incomeTv"
+                    app:layout_constraintTop_toBottomOf="@+id/incomeTv" />
+
+                <TextView
+                    android:id="@+id/descForSpentIncomeTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:fontFamily="@font/popins_700"
+                    android:justificationMode="inter_character"
+                    android:text="@string/spent_income_description"
+                    android:textAlignment="center"
+                    android:textColor="@color/brown_400"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spentAmountTv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/line1"
+                style="@style/line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="50dp"
+                android:background="@color/grey_400"
+                app:layout_constraintEnd_toEndOf="@id/cardCv"
+                app:layout_constraintStart_toStartOf="@id/cardCv"
+                app:layout_constraintTop_toBottomOf="@id/addWalletBtn" />
+
+            <View
+                android:id="@+id/line2"
+                style="@style/line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="50dp"
+                android:background="@color/grey_400"
+                app:layout_constraintEnd_toEndOf="@id/cardCv"
+                app:layout_constraintStart_toStartOf="@id/cardCv"
+                app:layout_constraintTop_toBottomOf="@id/descForQrCodeTv" />
+
+            <View
+                android:id="@+id/line3"
+                style="@style/line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="50dp"
+                android:background="@color/grey_400"
+                app:layout_constraintEnd_toEndOf="@id/cardCv"
+                app:layout_constraintStart_toStartOf="@id/cardCv"
+                app:layout_constraintTop_toBottomOf="@id/spentIncomeCl" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

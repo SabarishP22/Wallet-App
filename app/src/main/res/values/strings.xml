@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">WalletApp</string>
+    <string name="app_icon">appIcon</string>
+
+    <!--auth-->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="login_terms_conditions"><![CDATA[By continuing, you agree to Privacy Policy \n and Terms & Conditions.]]></string>
+    <string name="don_t_have_an_account_register">Don\'t have an account? Register</string>
+    <string name="already_have_an_account_log_in">Already have an account? Log in</string>
+    <string name="i_agree_with_terms_conditions"><![CDATA[I agree with Terms & Conditions]]></string>
+    <string name="register_now">Register Now</string>
+    <string name="name">Name</string>
+    <string name="enter_your_email">Email</string>
+    <string name="please_enter_your_email_address">Please enter your email address</string>
+    <string name="password">Password</string>
+    <string name="please_enter_your_password">Please enter your password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="email_validation_error">Enter a valid email.</string>
+    <string name="email_password_empty_error">Email and Password must not be empty.</string>
+    <string name="password_validation_error">Password must be 8 characters, include 1 special character and 1 letter.</string>
+    <string name="email_password_name_validation_error">Name or Email or Password must not be empty.</string>
+    <string name="terms_and_condition_desc"><![CDATA[Please accept the Terms & Conditions.]]></string>
+    <string name="user_not_found_desc">Unable to find the user. Please try again.</string>
+
+
+    <!--home-->
+    <string name="welcome_back">Welcome back!</string>
+    <string name="total_balance">Total Balance</string>
+    <string name="four_star">****</string>
+    <string name="card_holder">Card Holder</string>
+    <string name="expired">Expiry MM/YYYY</string>
+    <string name="scan_qr_and_my_qr">Scan a QR code to send money or share your QR code to receive payments.</string>
+    <string name="spent">Spent</string>
+    <string name="income">Income</string>
+    <string name="_5_206">$5,206</string>
+    <string name="spent_income_description">This month\'s Spend and Income are calculated based only on QR-scanned transactions. Amounts added to the wallet are not included.</string>
+    <string name="add_new_wallet">Add New Wallet</string>
+    <string name="cvv">CVV</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="add_amount_to_wallet">Add Amount To Wallet</string>
+    <string name="add_wallet">Add Wallet</string>
+    <string name="add">Add</string>
+    <string name="add_amount_to_wallet_desc">This amount will add into your wallet as a static money.</string>
+    <string name="pay_amount_to_desc">This amount will pay to the other users with a static money.</string>
+    <string name="transactions_history">Transactions History</string>
+    <string name="add_amount_to_pay">Add Amount to Pay</string>
+    <string name="pay">Pay</string>
+    <string name="whoops">Whoops !</string>
+    <string name="ok">OK</string>
+    <string name="amount_added_to_wallet">Amount added to wallet successfully 😃</string>
+    <string name="amount_added_to_wallet_failed">Amount failed added to wallet 😕</string>
+    <string name="scanned_fail_desc">The QR code is not valid. It may occur, if the user is no longer available.</string>
+    <string name="wallet_remove_desc">Wallet removed successfully 😃</string>
+    <string name="wallet_added_desc">Wallet added successfully 😃</string>
+    <string name="success">Success !</string>
+    <string name="wallet_remove_failed_desc">Wallet removed failed 😕. Please check your network connection.</string>
+    <string name="remove_wallet">Remove Wallet</string>
+    <string name="proceed">Proceed</string>
+    <string name="cancel">Cancel</string>
+    <string name="remove_wallet_confirmation_head">Remove Wallet?</string>
+    <string name="remove_wallet_confirmation_desc">Removing the wallet will not erase your balance, Spent, Incomes, or Transaction history—they will all be saved. When you create a new wallet, your balance will be restored, and you can continue making transactions. However, you must create a wallet before making any new transactions.</string>
+    <string name="select_payment_method">Select Payment Method</string>
+    <string name="enter_all_field_wallet">Please enter all fields to proceed.</string>
+    <string name="_0000">0000</string>
+    <string name="no_transactions">No Transactions</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="email">Email</string>
+    <string name="receiver_name">Receiver name</string>
+    <string name="paying_to">Paying to %1$s…</string>
+    <string name="add_minus">- %1$s</string>
+    <string name="add_plus">+ %1$s</string>
+    <string name="debit_card">Debit card</string>
+    <string name="date">date</string>
+    <string name="bank_account">Bank Account</string>
+    <string name="payment_success">Payment completed !</string>
+    <string name="payment_failed">Payment failed !</string>
+    <string name="_0">₹ 0</string>
+    <string name="enter_amount_error">Please enter a amount to pay.</string>
+    <string name="give_feedback">Give feedback</string>
+
+
+</resources>
